@@ -1,3 +1,6 @@
+com/bootcamp/app/application/BoardUseCaseTest.class
+com/bootcamp/app/application/CardUseCaseTest.class
 com/bootcamp/app/domain/CardTest.class
 com/bootcamp/app/ApplicationTest.class
+com/bootcamp/app/application/ReportUseCaseTest.class
 com/bootcamp/app/domain/BoardTest.class

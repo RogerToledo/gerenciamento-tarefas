@@ -42,15 +42,15 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 ## 🔄 Fase 3: Camada de Aplicação (`application`) — Casos de Uso e Portas
 
-- [ ] **Task 3.1:** Criar as interfaces de Portas de Saída (`BoardRepositoryPort`, `ColumnRepositoryPort`, `CardRepositoryPort`, `ReportRepositoryPort`).
-- [ ] **Task 3.2:** Implementar os DTOs de entrada e saída para as operações do sistema.
-- [ ] **Task 3.3:** Implementar Caso de Uso: **Gerenciamento de Boards** (Criar, Selecionar, Excluir).
-- [ ] **Task 3.4:** Implementar Caso de Uso: **Gerenciamento de Colunas** (Criar coluna PENDING, Deletar coluna PENDING, Alterar posição de colunas PENDING).
-- [ ] **Task 3.5:** Implementar Caso de Uso: **Gerenciamento de Cards** (Criar card, Editar card, Deletar card com validação de campos obrigatórios).
-- [ ] **Task 3.6:** Implementar Caso de Uso: **Movimentação e Bloqueio** (Mover para próxima coluna, Cancelar card, Bloquear com motivo, Desbloquear card).
-- [ ] **Task 3.7:** Implementar Caso de Uso: **Relatório de Tempo em Colunas** (Calcular tempo gasto em cada coluna e tempo total até a conclusão/entrega).
-- [ ] **Task 3.8:** Implementar Caso de Uso: **Relatório de Bloqueios** (Listar histórico de bloqueios, duração de cada bloqueio e justificativa).
-- [ ] **Task 3.9:** Escrever testes unitários para os Casos de Uso usando Mockito para simular as portas dos repositórios.
+- [x] **Task 3.1:** Criar as interfaces de Portas de Saída (`BoardRepositoryPort`, `ColumnRepositoryPort`, `CardRepositoryPort`, `ReportRepositoryPort`).
+- [x] **Task 3.2:** Implementar os DTOs de entrada e saída para as operações do sistema.
+- [x] **Task 3.3:** Implementar Caso de Uso: **Gerenciamento de Boards** (Criar, Selecionar, Excluir).
+- [x] **Task 3.4:** Implementar Caso de Uso: **Gerenciamento de Colunas** (Criar coluna PENDING, Deletar coluna PENDING, Alterar posição de colunas PENDING).
+- [x] **Task 3.5:** Implementar Caso de Uso: **Gerenciamento de Cards** (Criar card, Editar card, Deletar card com validação de campos obrigatórios).
+- [x] **Task 3.6:** Implementar Caso de Uso: **Movimentação e Bloqueio** (Mover para próxima coluna, Cancelar card, Bloquear com motivo, Desbloquear card).
+- [x] **Task 3.7:** Implementar Caso de Uso: **Relatório de Tempo em Colunas** (Calcular tempo gasto em cada coluna e tempo total até a conclusão/entrega).
+- [x] **Task 3.8:** Implementar Caso de Uso: **Relatório de Bloqueios** (Listar histórico de bloqueios, duração de cada bloqueio e justificativa).
+- [x] **Task 3.9:** Escrever testes unitários para os Casos de Uso usando Mockito para simular as portas dos repositórios.
 
 ---
 

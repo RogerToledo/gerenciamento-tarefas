@@ -20,11 +20,11 @@ public class Board {
         this.id = id;
         this.name = name;
         this.description = description;
+        initDefaultColumns();
     }
 
     public Board(String name, String description) {
         this(null, name, description);
-        initDefaultColumns();
     }
 
     /**

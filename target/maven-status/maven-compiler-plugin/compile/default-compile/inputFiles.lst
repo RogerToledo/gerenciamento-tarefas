@@ -1,6 +1,17 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/Application.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/BlockReportDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/BoardDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/CardDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/CardTimeReportDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/ColumnDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/ColumnTimeReportDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/BoardRepositoryPort.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/CardRepositoryPort.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/BoardUseCase.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/CardUseCase.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/ReportUseCase.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/package-info.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/CardBlockedException.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/DomainException.java
