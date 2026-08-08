@@ -97,5 +97,5 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 ## 📦 Fase 7: Documentação
 
-- [ ] **Task 7.1:** Escrever o `README.md` detalhando como rodar a aplicação, comandos Docker, como executar os testes e exemplos dos menus/relatórios.
-- [ ] **Task 7.2:** Fazer o commit final do código revisado e pronto para entrega do bootcamp.
+- [x] **Task 7.1:** Escrever o `README.md` detalhando como rodar a aplicação, comandos Docker, como executar os testes e exemplos dos menus/relatórios.
+- [x] **Task 7.2:** Fazer o commit final do código revisado e pronto para entrega do bootcamp.
