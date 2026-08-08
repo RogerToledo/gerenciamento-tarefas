@@ -1,0 +1,11 @@
+com/bootcamp/app/domain/model/Card.class
+com/bootcamp/app/domain/model/ColumnType.class
+com/bootcamp/app/domain/exception/InvalidCardMovementException.class
+com/bootcamp/app/domain/model/CardColumnHistory.class
+com/bootcamp/app/domain/exception/InvalidColumnOrderException.class
+com/bootcamp/app/domain/exception/CardBlockedException.class
+com/bootcamp/app/domain/exception/DomainException.class
+com/bootcamp/app/Application.class
+com/bootcamp/app/domain/model/CardBlockHistory.class
+com/bootcamp/app/domain/model/BoardColumn.class
+com/bootcamp/app/domain/model/Board.class

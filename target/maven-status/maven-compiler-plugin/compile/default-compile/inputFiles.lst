@@ -1,0 +1,11 @@
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/Application.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/CardBlockedException.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/DomainException.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/InvalidCardMovementException.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/InvalidColumnOrderException.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/Board.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/BoardColumn.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/Card.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/CardBlockHistory.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/CardColumnHistory.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/ColumnType.java
