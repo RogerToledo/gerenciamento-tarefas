@@ -13,14 +13,22 @@ public class Board {
     private String description;
     private final List<BoardColumn> columns = new ArrayList<>();
 
-    public Board(Long id, String name, String description) {
+    public Board(Long id, String name, String description, List<BoardColumn> existingColumns) {
         if (name == null || name.trim().isEmpty()) {
             throw new DomainException("O nome do board é obrigatório.");
         }
         this.id = id;
         this.name = name;
         this.description = description;
-        initDefaultColumns();
+        if (existingColumns != null && !existingColumns.isEmpty()) {
+            this.columns.addAll(existingColumns);
+        } else {
+            initDefaultColumns();
+        }
+    }
+
+    public Board(Long id, String name, String description) {
+        this(id, name, description, null);
     }
 
     public Board(String name, String description) {

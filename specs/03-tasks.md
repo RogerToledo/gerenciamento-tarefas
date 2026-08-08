@@ -56,22 +56,22 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 ## 🗄️ Fase 4: Camada de Infraestrutura — Persistência (`infrastructure.persistence`)
 
-- [ ] **Task 4.1:** Criar script Flyway `V1__create_board_tables.sql` contendo os schemas de `boards`, `board_columns`, `cards`, `card_column_history` e `card_block_history`.
-- [ ] **Task 4.2:** Mapear as Entidades JPA (`@Entity`) correspondentes às tabelas do banco de dados.
-- [ ] **Task 4.3:** Criar as interfaces Spring Data JPA (`BoardJpaRepository`, `CardJpaRepository`, etc.).
-- [ ] **Task 4.4:** Criar a classe Mappers (`BoardMapper`, `CardMapper`) para conversão de/para Entidades JPA ↔ Entidades de Domínio.
-- [ ] **Task 4.5:** Implementar os adaptadores concretos de repositório que realizam as operações no banco via Spring Data JPA.
+- [x] **Task 4.1:** Criar script Flyway `V1__create_board_tables.sql` contendo os schemas de `boards`, `board_columns`, `cards`, `card_column_history` e `card_block_history`.
+- [x] **Task 4.2:** Mapear as Entidades JPA (`@Entity`) correspondentes às tabelas do banco de dados.
+- [x] **Task 4.3:** Criar as interfaces Spring Data JPA (`BoardJpaRepository`, `CardJpaRepository`, etc.).
+- [x] **Task 4.4:** Criar a classe Mappers (`BoardMapper`, `CardMapper`) para conversão de/para Entidades JPA ↔ Entidades de Domínio.
+- [x] **Task 4.5:** Implementar os adaptadores concretos de repositório que realizam as operações no banco via Spring Data JPA.
 
 ---
 
 ## 🖥️ Fase 5: Interface do Usuário (Menu / CLI / REST)
 
-- [ ] **Task 5.1:** Implementar o **Menu Principal (Menu 1)** com as opções:
+- [x] **Task 5.1:** Implementar o **Menu Principal (Menu 1)** com as opções:
   1. Criar novo board
   2. Selecionar board
   3. Excluir boards
   4. Sair
-- [ ] **Task 5.2:** Implementar o **Menu do Board Selecionado (Menu 2)** com as opções:
+- [x] **Task 5.2:** Implementar o **Menu do Board Selecionado (Menu 2)** com as opções:
   1. Mover card para próxima coluna
   2. Cancelar card
   3. Criar card
@@ -80,8 +80,8 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
   6. Gerar relatório de tempo
   7. Gerar relatório de bloqueios
   8. Fechar board (Voltar ao Menu Principal)
-- [ ] **Task 5.3:** Adicionar captura e exibição amigável de erros (validação de campos obrigatórios, erros de movimentação ou regra de negócio).
-- [ ] *(Opcional)* **Task 5.4:** Se houver API REST / Frontend Web, implementar os REST Controllers correspondentes para integrar com a interface.
+- [x] **Task 5.3:** Adicionar captura e exibição amigável de erros (validação de campos obrigatórios, erros de movimentação ou regra de negócio).
+- [x] **Task 5.4:** Implementar os REST Controllers correspondentes para integrar e expor a API via HTTP.
 
 ---
 
