@@ -1,4 +1,7 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/Application.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/package-info.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/CardBlockedException.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/DomainException.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/InvalidCardMovementException.java
@@ -9,3 +12,6 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/CardBlockHistory.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/CardColumnHistory.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/ColumnType.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/config/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/persistence/package-info.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/web/package-info.java
