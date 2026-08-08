@@ -87,11 +87,11 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 ## 🧪 Fase 6: Testes de Integração e Validação Final
 
-- [ ] **Task 6.1:** Escrever testes de integração simulando o fluxo completo de um Board:
+- [x] **Task 6.1:** Escrever testes de integração simulando o fluxo completo de um Board:
   * Criar board -> Criar card -> Mover card até Entregue -> Verificar registros na tabela de histórico de tempo.
-- [ ] **Task 6.2:** Testar o cenário de bloqueio e relatórios:
+- [x] **Task 6.2:** Testar o cenário de bloqueio e relatórios:
   * Bloquear card -> Tentar mover (esperar erro) -> Desbloquear -> Verificar relatório de bloqueios gerado.
-- [ ] **Task 6.3:** Testar regras de ordenação de colunas e exclusão de colunas do tipo `PENDING`.
+- [x] **Task 6.3:** Testar regras de ordenação de colunas e exclusão de colunas do tipo `PENDING`.
 
 ---
 

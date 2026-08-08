@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bootcamp.app.domain.CardTest" time="0.008" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bootcamp.app.integration.BoardIntegrationTest" time="2.434" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -65,11 +65,545 @@
     <property name="java.class.version" value="69.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[gerenciamento-tarefas] "/>
   </properties>
-  <testcase name="shouldThrowExceptionWhenBlockingWithoutReason" classname="com.bootcamp.app.domain.CardTest" time="0.002"/>
-  <testcase name="shouldMoveCardToNextColumn" classname="com.bootcamp.app.domain.CardTest" time="0.001"/>
-  <testcase name="shouldCancelCardFromPendingColumn" classname="com.bootcamp.app.domain.CardTest" time="0.001"/>
-  <testcase name="shouldUnblockCardAndAllowMovement" classname="com.bootcamp.app.domain.CardTest" time="0.0"/>
-  <testcase name="shouldThrowExceptionWhenSkippingColumn" classname="com.bootcamp.app.domain.CardTest" time="0.001"/>
-  <testcase name="shouldBlockCardAndPreventMovement" classname="com.bootcamp.app.domain.CardTest" time="0.002"/>
-  <testcase name="shouldThrowExceptionWhenCancellingCardFromFinalColumn" classname="com.bootcamp.app.domain.CardTest" time="0.0"/>
+  <testcase name="cardBlockingAndReportIntegrationTest" classname="com.bootcamp.app.integration.BoardIntegrationTest" time="0.412">
+    <system-out><![CDATA[20:29:40.108 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.bootcamp.app.integration.BoardIntegrationTest]: BoardIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:29:40.159 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.bootcamp.app.Application for test class com.bootcamp.app.integration.BoardIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-08-08T20:29:40.312-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] c.b.a.integration.BoardIntegrationTest   : Starting BoardIntegrationTest using Java 25.0.4 with PID 11491 (started by rogertoledo in /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas)
+2026-08-08T20:29:40.313-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] c.b.a.integration.BoardIntegrationTest   : The following 1 profile is active: "test"
+2026-08-08T20:29:40.542-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-08T20:29:40.572-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 5 JPA repository interfaces.
+2026-08-08T20:29:40.771-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-08T20:29:40.847-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-08-08T20:29:40.848-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-08T20:29:40.871-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:testdb (H2 2.2)
+2026-08-08T20:29:40.878-03:00  WARN 11491 --- [gerenciamento-tarefas] [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2026-08-08T20:29:40.889-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-08-08T20:29:40.890-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.005s)
+2026-08-08T20:29:40.894-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-08-08T20:29:40.905-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-08-08T20:29:40.908-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create board tables"
+2026-08-08T20:29:40.920-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.007s)
+2026-08-08T20:29:40.958-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-08T20:29:40.984-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-08-08T20:29:40.995-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-08T20:29:41.096-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-08T20:29:41.111-03:00  WARN 11491 --- [gerenciamento-tarefas] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-08T20:29:41.541-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-08T20:29:41.550-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-08T20:29:41.669-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-08T20:29:41.887-03:00  WARN 11491 --- [gerenciamento-tarefas] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-08T20:29:42.034-03:00  INFO 11491 --- [gerenciamento-tarefas] [           main] c.b.a.integration.BoardIntegrationTest   : Started BoardIntegrationTest in 1.826 seconds (process running for 2.186)
+Hibernate: 
+    insert 
+    into
+        boards
+        (description, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cards
+        (block_reason, block_timestamp, blocked, column_id, description, title, unblock_timestamp, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        card_block_history
+        (block_timestamp, card_id, reason, unblock_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    select
+        cbhe1_0.id,
+        cbhe1_0.block_timestamp,
+        cbhe1_0.card_id,
+        cbhe1_0.reason,
+        cbhe1_0.unblock_timestamp 
+    from
+        card_block_history cbhe1_0 
+    where
+        cbhe1_0.card_id=? 
+    order by
+        cbhe1_0.block_timestamp
+Hibernate: 
+    update
+        cards 
+    set
+        block_reason=?,
+        block_timestamp=?,
+        blocked=?,
+        column_id=?,
+        description=?,
+        title=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    update
+        card_column_history 
+    set
+        arrival_timestamp=?,
+        card_id=?,
+        column_id=?,
+        departure_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    update
+        card_block_history 
+    set
+        block_timestamp=?,
+        card_id=?,
+        reason=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        cards 
+    set
+        block_reason=?,
+        block_timestamp=?,
+        blocked=?,
+        column_id=?,
+        description=?,
+        title=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    select
+        cbhe1_0.id,
+        cbhe1_0.block_timestamp,
+        cbhe1_0.card_id,
+        cbhe1_0.reason,
+        cbhe1_0.unblock_timestamp 
+    from
+        card_block_history cbhe1_0 
+    where
+        cbhe1_0.card_id in (select
+            ce1_0.id 
+        from
+            cards ce1_0 
+        join
+            board_columns c1_0 
+                on c1_0.id=ce1_0.column_id 
+        where
+            c1_0.board_id=?) 
+    order by
+        cbhe1_0.block_timestamp
+Hibernate: 
+    select
+        ce1_0.id,
+        ce1_0.block_reason,
+        ce1_0.block_timestamp,
+        ce1_0.blocked,
+        ce1_0.column_id,
+        ce1_0.description,
+        ce1_0.title,
+        ce1_0.unblock_timestamp 
+    from
+        cards ce1_0 
+    join
+        board_columns c1_0 
+            on c1_0.id=ce1_0.column_id 
+    where
+        c1_0.board_id=?
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/rogertoledo/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="fullBoardCardLifecycleIntegrationTest" classname="com.bootcamp.app.integration.BoardIntegrationTest" time="0.013">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        boards
+        (description, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cards
+        (block_reason, block_timestamp, blocked, column_id, description, title, unblock_timestamp, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        cards 
+    set
+        block_reason=?,
+        block_timestamp=?,
+        blocked=?,
+        column_id=?,
+        description=?,
+        title=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    update
+        card_column_history 
+    set
+        arrival_timestamp=?,
+        card_id=?,
+        column_id=?,
+        departure_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        cards 
+    set
+        block_reason=?,
+        block_timestamp=?,
+        blocked=?,
+        column_id=?,
+        description=?,
+        title=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    update
+        card_column_history 
+    set
+        arrival_timestamp=?,
+        card_id=?,
+        column_id=?,
+        departure_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+]]></system-out>
+  </testcase>
+  <testcase name="pendingColumnsAndCancellationIntegrationTest" classname="com.bootcamp.app.integration.BoardIntegrationTest" time="0.016">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        boards
+        (description, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cards
+        (block_reason, block_timestamp, blocked, column_id, description, title, unblock_timestamp, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        board_columns
+        (board_id, name, order_index, type, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        board_columns 
+    set
+        board_id=?,
+        name=?,
+        order_index=?,
+        type=? 
+    where
+        id=?
+Hibernate: 
+    update
+        board_columns 
+    set
+        board_id=?,
+        name=?,
+        order_index=?,
+        type=? 
+    where
+        id=?
+Hibernate: 
+    update
+        board_columns 
+    set
+        board_id=?,
+        name=?,
+        order_index=?,
+        type=? 
+    where
+        id=?
+Hibernate: 
+    update
+        cards 
+    set
+        block_reason=?,
+        block_timestamp=?,
+        blocked=?,
+        column_id=?,
+        description=?,
+        title=?,
+        unblock_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    update
+        card_column_history 
+    set
+        arrival_timestamp=?,
+        card_id=?,
+        column_id=?,
+        departure_timestamp=? 
+    where
+        id=?
+Hibernate: 
+    select
+        cche1_0.id,
+        cche1_0.arrival_timestamp,
+        cche1_0.card_id,
+        cche1_0.column_id,
+        cche1_0.departure_timestamp 
+    from
+        card_column_history cche1_0 
+    where
+        cche1_0.card_id=? 
+    order by
+        cche1_0.arrival_timestamp
+Hibernate: 
+    insert 
+    into
+        card_column_history
+        (arrival_timestamp, card_id, column_id, departure_timestamp, id) 
+    values
+        (?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
 </testsuite>

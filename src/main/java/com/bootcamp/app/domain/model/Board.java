@@ -45,6 +45,7 @@ public class Board {
         this.columns.add(new BoardColumn("Backlog", ColumnType.INITIAL, 1));
         this.columns.add(new BoardColumn("Em andamento", ColumnType.PENDING, 2));
         this.columns.add(new BoardColumn("Entregue", ColumnType.FINAL, 3));
+        this.columns.add(new BoardColumn("Cancelado", ColumnType.CANCELLED, 4));
     }
 
     public void addPendingColumn(String columnName, int position) {
