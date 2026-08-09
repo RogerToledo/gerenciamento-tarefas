@@ -1,12 +1,10 @@
 package com.bootcamp.app.infrastructure.cli;
 
-import com.bootcamp.app.application.dto.BlockReportDTO;
-import com.bootcamp.app.application.dto.BoardDTO;
-import com.bootcamp.app.application.dto.CardDTO;
-import com.bootcamp.app.application.dto.CardTimeReportDTO;
+import com.bootcamp.app.application.dto.*;
 import com.bootcamp.app.application.usecases.BoardUseCase;
 import com.bootcamp.app.application.usecases.CardUseCase;
 import com.bootcamp.app.application.usecases.ReportUseCase;
+import com.bootcamp.app.application.usecases.ViewBoardUseCase;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
@@ -21,11 +19,13 @@ public class BoardCliApplication implements CommandLineRunner {
     private final BoardUseCase boardUseCase;
     private final CardUseCase cardUseCase;
     private final ReportUseCase reportUseCase;
+    private final ViewBoardUseCase viewBoardUseCase;
 
-    public BoardCliApplication(BoardUseCase boardUseCase, CardUseCase cardUseCase, ReportUseCase reportUseCase) {
+    public BoardCliApplication(BoardUseCase boardUseCase, CardUseCase cardUseCase, ReportUseCase reportUseCase, ViewBoardUseCase viewBoardUseCase) {
         this.boardUseCase = boardUseCase;
         this.cardUseCase = cardUseCase;
         this.reportUseCase = reportUseCase;
+        this.viewBoardUseCase = viewBoardUseCase;
     }
 
     @Override
@@ -100,12 +100,8 @@ public class BoardCliApplication implements CommandLineRunner {
     private void runBoardMenu(Scanner scanner, Long boardId) {
         boolean inBoardMenu = true;
         while (inBoardMenu) {
-            BoardDTO board = boardUseCase.getBoardById(boardId);
-            System.out.println("\n=========================================");
-            System.out.println(" 📌 BOARD SELECIONADO: " + board.name() + " [ID: " + board.id() + "]");
-            System.out.println("=========================================");
-            System.out.println("Colunas:");
-            board.columns().forEach(c -> System.out.println("  [" + c.orderIndex() + "] " + c.name() + " (" + c.type() + ")"));
+            BoardViewDTO boardView = viewBoardUseCase.execute(boardId);
+            BoardConsolePrinter.printBoard(boardView);
 
             System.out.println("\n--- MENU DO BOARD ---");
             System.out.println("1. Mover card para próxima coluna");

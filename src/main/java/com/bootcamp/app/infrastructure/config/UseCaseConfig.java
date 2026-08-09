@@ -25,4 +25,9 @@ public class UseCaseConfig {
     public ReportUseCase reportUseCase(CardRepositoryPort cardRepositoryPort, BoardRepositoryPort boardRepositoryPort) {
         return new ReportUseCase(cardRepositoryPort, boardRepositoryPort);
     }
+
+    @Bean
+    public com.bootcamp.app.application.usecases.ViewBoardUseCase viewBoardUseCase(BoardRepositoryPort boardRepositoryPort, CardRepositoryPort cardRepositoryPort) {
+        return new com.bootcamp.app.application.usecases.ViewBoardUseCase(boardRepositoryPort, cardRepositoryPort);
+    }
 }

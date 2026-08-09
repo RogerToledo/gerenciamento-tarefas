@@ -1,10 +1,12 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/Application.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/BlockReportDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/BoardDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/BoardViewDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/CardDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/CardTimeReportDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/ColumnDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/ColumnTimeReportDTO.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/ColumnWithCardsDTO.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/dto/package-info.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/BoardRepositoryPort.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/ports/CardRepositoryPort.java
@@ -12,6 +14,7 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/BoardUseCase.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/CardUseCase.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/ReportUseCase.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/ViewBoardUseCase.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/application/usecases/package-info.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/CardBlockedException.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/exception/DomainException.java
@@ -24,6 +27,7 @@
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/CardColumnHistory.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/domain/model/ColumnType.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/cli/BoardCliApplication.java
+/Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/cli/BoardConsolePrinter.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/config/UseCaseConfig.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/config/package-info.java
 /Users/rogertoledo/Mine/app/be/gerenciamento-tarefas/src/main/java/com/bootcamp/app/infrastructure/persistence/adapter/BoardRepositoryAdapter.java

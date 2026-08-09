@@ -14,12 +14,13 @@ Aplicação de gerenciamento e acompanhamento de tarefas no formato de Board (Ka
   3. Excluir boards
   4. Sair
 * **RF02 - Menu do Board Selecionado:** Ao selecionar um board, o sistema deve disponibilizar:
-  1. Mover card para a próxima coluna
-  2. Cancelar card
-  3. Criar card
-  4. Bloquear card
-  5. Desbloquear card
-  6. Fechar board (voltar ao menu principal)
+  1. Visualizar Board (Exibir colunas e cards)  
+  2. Mover card para a próxima coluna
+  3. Cancelar card
+  4. Criar card
+  5. Bloquear card
+  6. Desbloquear card
+  7. Fechar board (voltar ao menu principal)
 
 ### 2.2 Gestão de Boards e Colunas
 * **RF03 - Estrutura do Board:** Um board possui `Nome` (obrigatório) e `Descrição` (opcional).
@@ -51,3 +52,4 @@ Aplicação de gerenciamento e acompanhamento de tarefas no formato de Board (Ka
 ### 2.4 Relatórios e Métricas
 * **RF10 - Relatório de Tempo em Coluna:** Exibir o tempo total que a tarefa levou para ser concluída, detalhando o tempo de permanência (`Data Chegada` até `Data Saída`) em cada uma das colunas pelas quais passou.
 * **RF11 - Relatório de Bloqueios:** Exibir o histórico de bloqueios do board, informando qual card foi bloqueado, a justificativa e a duração total em que permaneceu bloqueado.
+* **RF12 - Exibição do Quadro:** O sistema deve listar todas as colunas do board na ordem correta, exibindo dentro de cada coluna seus respectivos cards com ID, Título, Descrição resumida e um indicador visual de bloqueio `[🔒]` acompanhado do motivo, caso esteja bloqueado.

@@ -51,6 +51,7 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 - [x] **Task 3.7:** Implementar Caso de Uso: **Relatório de Tempo em Colunas** (Calcular tempo gasto em cada coluna e tempo total até a conclusão/entrega).
 - [x] **Task 3.8:** Implementar Caso de Uso: **Relatório de Bloqueios** (Listar histórico de bloqueios, duração de cada bloqueio e justificativa).
 - [x] **Task 3.9:** Escrever testes unitários para os Casos de Uso usando Mockito para simular as portas dos repositórios.
+- [x] **Task 3.10:** Implementar o Caso de Uso `ViewBoardUseCase` (retorna o Board agrupado com suas Colunas ordenadas e a lista de Cards ativos em cada coluna).
 
 ---
 
@@ -82,6 +83,7 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
   8. Fechar board (Voltar ao Menu Principal)
 - [x] **Task 5.3:** Adicionar captura e exibição amigável de erros (validação de campos obrigatórios, erros de movimentação ou regra de negócio).
 - [x] **Task 5.4:** Implementar os REST Controllers correspondentes para integrar e expor a API via HTTP.
+- [x] **Task 5.5:** Criar o formatador visual no console (`BoardConsolePrinter`) para renderizar o quadro de forma organizada e legível no terminal.
 
 ---
 

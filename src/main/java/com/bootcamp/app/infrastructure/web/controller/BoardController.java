@@ -1,7 +1,9 @@
 package com.bootcamp.app.infrastructure.web.controller;
 
 import com.bootcamp.app.application.dto.BoardDTO;
+import com.bootcamp.app.application.dto.BoardViewDTO;
 import com.bootcamp.app.application.usecases.BoardUseCase;
+import com.bootcamp.app.application.usecases.ViewBoardUseCase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +15,11 @@ import java.util.List;
 public class BoardController {
 
     private final BoardUseCase boardUseCase;
+    private final ViewBoardUseCase viewBoardUseCase;
 
-    public BoardController(BoardUseCase boardUseCase) {
+    public BoardController(BoardUseCase boardUseCase, ViewBoardUseCase viewBoardUseCase) {
         this.boardUseCase = boardUseCase;
+        this.viewBoardUseCase = viewBoardUseCase;
     }
 
     @PostMapping
@@ -27,6 +31,11 @@ public class BoardController {
     @GetMapping("/{id}")
     public ResponseEntity<BoardDTO> getBoardById(@PathVariable Long id) {
         return ResponseEntity.ok(boardUseCase.getBoardById(id));
+    }
+
+    @GetMapping("/{id}/view")
+    public ResponseEntity<BoardViewDTO> viewBoard(@PathVariable Long id) {
+        return ResponseEntity.ok(viewBoardUseCase.execute(id));
     }
 
     @GetMapping

@@ -7,6 +7,7 @@ com/bootcamp/app/domain/exception/DomainException.class
 com/bootcamp/app/domain/exception/InvalidCardMovementException.class
 com/bootcamp/app/infrastructure/persistence/entity/CardEntity.class
 com/bootcamp/app/domain/exception/CardBlockedException.class
+com/bootcamp/app/application/dto/BoardViewDTO.class
 com/bootcamp/app/application/usecases/BoardUseCase.class
 com/bootcamp/app/infrastructure/persistence/repository/BoardJpaRepository.class
 com/bootcamp/app/domain/model/Card.class
@@ -15,6 +16,7 @@ com/bootcamp/app/application/ports/CardRepositoryPort.class
 com/bootcamp/app/infrastructure/persistence/repository/CardJpaRepository.class
 com/bootcamp/app/application/ports/BoardRepositoryPort.class
 com/bootcamp/app/infrastructure/persistence/entity/CardColumnHistoryEntity.class
+com/bootcamp/app/infrastructure/cli/BoardConsolePrinter.class
 com/bootcamp/app/application/dto/BoardDTO.class
 com/bootcamp/app/infrastructure/config/package-info.class
 com/bootcamp/app/application/dto/CardTimeReportDTO.class
@@ -30,6 +32,7 @@ com/bootcamp/app/infrastructure/persistence/mapper/CardMapper.class
 com/bootcamp/app/infrastructure/persistence/entity/CardBlockHistoryEntity.class
 com/bootcamp/app/application/usecases/ReportUseCase.class
 com/bootcamp/app/application/usecases/CardUseCase.class
+com/bootcamp/app/application/dto/ColumnWithCardsDTO.class
 com/bootcamp/app/infrastructure/persistence/adapter/BoardRepositoryAdapter.class
 com/bootcamp/app/infrastructure/persistence/mapper/BoardMapper.class
 com/bootcamp/app/application/usecases/package-info.class
@@ -37,6 +40,7 @@ com/bootcamp/app/application/ports/package-info.class
 com/bootcamp/app/domain/model/BoardColumn.class
 com/bootcamp/app/infrastructure/persistence/package-info.class
 com/bootcamp/app/domain/model/ColumnType.class
+com/bootcamp/app/application/usecases/ViewBoardUseCase.class
 com/bootcamp/app/infrastructure/config/UseCaseConfig.class
 com/bootcamp/app/infrastructure/web/controller/ReportController.class
 com/bootcamp/app/application/dto/BlockReportDTO.class
