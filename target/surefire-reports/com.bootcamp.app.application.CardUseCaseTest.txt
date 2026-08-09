@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.bootcamp.app.application.CardUseCaseTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in com.bootcamp.app.application.CardUseCaseTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s -- in com.bootcamp.app.application.CardUseCaseTest

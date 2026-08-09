@@ -36,6 +36,12 @@ public class BoardRepositoryAdapter implements BoardRepositoryPort {
     }
 
     @Override
+    public Optional<Board> findByCardId(Long cardId) {
+        return boardJpaRepository.findByCardId(cardId)
+                .map(BoardMapper::toDomain);
+    }
+
+    @Override
     public List<Board> findAll() {
         return boardJpaRepository.findAll().stream()
                 .map(BoardMapper::toDomain)

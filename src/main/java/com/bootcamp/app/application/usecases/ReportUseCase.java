@@ -33,6 +33,11 @@ public class ReportUseCase {
         Card card = cardRepository.findById(cardId)
                 .orElseThrow(() -> new DomainException("Card não encontrado com ID: " + cardId));
 
+        Map<Long, String> columnNameMap = boardRepository.findByCardId(cardId)
+                .map(b -> b.getColumns().stream()
+                        .collect(Collectors.toMap(BoardColumn::getId, BoardColumn::getName, (a, bName) -> a)))
+                .orElse(Map.of());
+
         List<CardColumnHistory> histories = cardRepository.findColumnHistoryByCardId(cardId);
         List<ColumnTimeReportDTO> columnTimes = new ArrayList<>();
         long totalMinutes = 0;
@@ -44,7 +49,7 @@ public class ReportUseCase {
             long minutes = Duration.between(arrival, departure).toMinutes();
             totalMinutes += minutes;
 
-            String columnName = "Coluna #" + history.getColumnId();
+            String columnName = columnNameMap.getOrDefault(history.getColumnId(), "Coluna #" + history.getColumnId());
             columnTimes.add(new ColumnTimeReportDTO(columnName, arrival, history.getDepartureTimestamp(), minutes));
         }
 

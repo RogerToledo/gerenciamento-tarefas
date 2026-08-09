@@ -57,12 +57,15 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 ## 🗄️ Fase 4: Camada de Infraestrutura — Persistência (`infrastructure.persistence`)
 
-- [x] **Task 4.1:** Criar script Flyway `V1__create_board_tables.sql` contendo os schemas de `boards`, `board_columns`, `cards`, `card_column_history` e `card_block_history`.
-- [x] **Task 4.2:** Mapear as Entidades JPA (`@Entity`) correspondentes às tabelas do banco de dados.
-- [x] **Task 4.3:** Criar as interfaces Spring Data JPA (`BoardJpaRepository`, `CardJpaRepository`, etc.).
-- [x] **Task 4.4:** Criar a classe Mappers (`BoardMapper`, `CardMapper`) para conversão de/para Entidades JPA ↔ Entidades de Domínio.
-- [x] **Task 4.5:** Implementar os adaptadores concretos de repositório que realizam as operações no banco via Spring Data JPA.
-
+- [x] **Task 4.1:** Criar scripts SQL de migração no Flyway (`V1__create_board_tables.sql`) contendo todas as tabelas do MySQL (`boards`, `board_columns`, `cards`, `card_column_history`, `card_block_history`).
+- [x] **Task 4.2:** Mapear as Entidades JPA (`@Entity`) e Repositórios/DAOs Spring Data JPA no pacote `infrastructure.persistence`:
+  * `BoardJpaRepository`: Operações CRUD e consultas de Boards.
+  * `CardJpaRepository`: Operações CRUD de Cards e consultas por board.
+  * `CardColumnHistoryJpaRepository`: Inserção e busca de históricos de tempo por coluna.
+  * `CardBlockHistoryJpaRepository`: Inserção e busca de histórico de bloqueios/desbloqueios.
+- [x] **Task 4.3:** Implementar métodos específicos nos Repositórios/DAOs JPA para alimentar o **Relatório de Tempo** e o **Relatório de Bloqueios**.
+- [x] **Task 4.4:** Criar os Mappers (`BoardMapper`, `CardMapper`) para conversão de/para Entidades JPA ↔ Entidades puras de Domínio.
+- [x] **Task 4.5:** Implementar os adaptadores concretos das Portas (`BoardRepositoryAdapter`, `CardRepositoryAdapter`) no pacote `infrastructure.persistence.adapter`.
 ---
 
 ## 🖥️ Fase 5: Interface do Usuário (Menu / CLI / REST)
@@ -101,3 +104,5 @@ Este documento guia o desenvolvimento passo a passo da aplicação de Board de T
 
 - [x] **Task 7.1:** Escrever o `README.md` detalhando como rodar a aplicação, comandos Docker, como executar os testes e exemplos dos menus/relatórios.
 - [x] **Task 7.2:** Fazer o commit final do código revisado e pronto para entrega do bootcamp.
+- [x] **Task FIX-1:** Garantir a gravação de histórico de movimentação de colunas (`CardColumnHistory`) ao mover o card e implementar o caso de uso `GenerateBoardTimeReportUseCase`.
+- [x] **Task FIX-2:** Não exibir as queries na tela do sistema
